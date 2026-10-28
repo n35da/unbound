@@ -1,5 +1,157 @@
 # Changelog
 
+## [0.11.0](https://github.com/marioparaschiv/unbound/compare/web-v0.10.0...web-v0.11.0) (2026-10-28)
+
+
+### Features
+
+* **client:** attach scrubbed log lines to crash reports ([0f0868f](https://github.com/marioparaschiv/unbound/commit/0f0868f0657432a977a23454ba8e6225c8ccf955))
+* **client:** attach scrubbed log lines to crash reports ([0733cbf](https://github.com/marioparaschiv/unbound/commit/0733cbfcd59321d8faf417367c973ecef1ff0ae2))
+* **client:** send opt-in crash reports to the API ([311f957](https://github.com/marioparaschiv/unbound/commit/311f957b1172343e1474813ddc73cacbd6f6de50))
+* **client:** send opt-in crash reports to the API ([9f10514](https://github.com/marioparaschiv/unbound/commit/9f10514fe9248fef7ed735b344537e02ed1f0afe))
+* **discord-bot:** react to unbound.rip through Postgres triggers, delete the bot feed ([5309aa4](https://github.com/marioparaschiv/unbound/commit/5309aa431de558b29a89387c610dfe51894bf421))
+* **discord-bot:** read the web's tables, woken by triggers on them ([7966354](https://github.com/marioparaschiv/unbound/commit/7966354cce30d3a58866cb8346186921a3a2e6ab))
+* **discord-bot:** turn on the audit log, compact embeds, export to OpenTelemetry ([#250](https://github.com/marioparaschiv/unbound/issues/250)) ([ba42953](https://github.com/marioparaschiv/unbound/commit/ba42953697e2baef38a973ae8aa644047e828c97))
+* hand off addon installs from the website through unbound:// ([#332](https://github.com/marioparaschiv/unbound/issues/332)) ([2c1e4d3](https://github.com/marioparaschiv/unbound/commit/2c1e4d384cac3e061d05e5c61756b8dacd408733))
+* **plugins:** republish rebuilt plugins with bytecode ([fbd653e](https://github.com/marioparaschiv/unbound/commit/fbd653e311392eb6b691bbbf4878b0c41da7ee2f))
+* **plugins:** republish rebuilt plugins with bytecode ([2574b6b](https://github.com/marioparaschiv/unbound/commit/2574b6b5b028b413a6d249fa20ab257ff1729cd3))
+* **web:** add the db:copy-sqlite script ([98aea8c](https://github.com/marioparaschiv/unbound/commit/98aea8c8a43866e95ae66c8669563f2932dedba0))
+* **web:** copy and verify SQLite data into Postgres in one transaction ([3f16845](https://github.com/marioparaschiv/unbound/commit/3f16845100799d45e046859d86d328a4fdd67772))
+* **web:** copy production data from SQLite into Postgres ([705f61a](https://github.com/marioparaschiv/unbound/commit/705f61a5a7a6fb6b23db110e191790e073bb11fb))
+* **web:** credit addons to their manifest authors ([8fc2acd](https://github.com/marioparaschiv/unbound/commit/8fc2acd93f081159414217e33d1b8494987d42bb))
+* **web:** derive a SQLite-to-Postgres copy registry from the schema ([fafed2c](https://github.com/marioparaschiv/unbound/commit/fafed2caa7e6d1643b880dd2beed691f0ce9aa8e))
+* **web:** drop the bot feed objects, its key and its locks ([b1e96e9](https://github.com/marioparaschiv/unbound/commit/b1e96e91f5ea1caa4764df8bfdb035fefd59ff2c))
+* **web:** export the bot read model, delete the bot feed API ([20e4972](https://github.com/marioparaschiv/unbound/commit/20e49724b092c50db60b80f113100034dd9bd3ab))
+* **web:** grant site admin to Development Team and Management ([#324](https://github.com/marioparaschiv/unbound/issues/324)) ([82b948c](https://github.com/marioparaschiv/unbound/commit/82b948c93f8ad92c307e76405d516a209442f80e))
+* **web:** link every identified author to their developer page ([#303](https://github.com/marioparaschiv/unbound/issues/303)) ([4c7af2b](https://github.com/marioparaschiv/unbound/commit/4c7af2b36a32aa043976a0e80e6141edf0ae3e53))
+* **web:** open Postgres with serializable transactions ([d5b0ed1](https://github.com/marioparaschiv/unbound/commit/d5b0ed1abb5623bd94a4fba4d6e2261924d98aca))
+* **web:** order staff by admin before moderator, then a manual position ([#329](https://github.com/marioparaschiv/unbound/issues/329)) ([3f870bf](https://github.com/marioparaschiv/unbound/commit/3f870bfbaf5c670a0c3cb0dbf16b40862a6b01a8))
+* **web:** plump design system, Unbound red accent and Nucleo icons ([#335](https://github.com/marioparaschiv/unbound/issues/335)) ([92ed8f7](https://github.com/marioparaschiv/unbound/commit/92ed8f70f03897bc144f41165fda8dd83101d21e))
+* **web:** port discord_profile to the Postgres baseline ([66c9666](https://github.com/marioparaschiv/unbound/commit/66c9666eb8ff3301e944167ffaf7bf25c5d5662d))
+* **web:** read the newest moderation event id for the bot ([cf0b731](https://github.com/marioparaschiv/unbound/commit/cf0b7315cc54c64cdb9dfad88928a048b210ec99))
+* **web:** run apps/web on Postgres ([eeeb00f](https://github.com/marioparaschiv/unbound/commit/eeeb00f5038de965622e24a19e9b9cea74cab1b3))
+* **web:** show addon authors in a Discord-style avatar pile ([#299](https://github.com/marioparaschiv/unbound/issues/299)) ([5f1717b](https://github.com/marioparaschiv/unbound/commit/5f1717bd90488e2e2d05f85d742784024f1faff1))
+* **web:** sync the Addon Developer Discord role into the team ([#326](https://github.com/marioparaschiv/unbound/issues/326)) ([84abe6e](https://github.com/marioparaschiv/unbound/commit/84abe6edee5169c196928bedfc96b82dfa22cf86))
+* **web:** sync the team by looking up known members, grant roles only ([#325](https://github.com/marioparaschiv/unbound/issues/325)) ([e124403](https://github.com/marioparaschiv/unbound/commit/e124403d2a9fc9cdfb4c55799261b53a6c4be2e6))
+* **web:** Team page with Discord role sync and motion polish ([#322](https://github.com/marioparaschiv/unbound/issues/322)) ([9cb311c](https://github.com/marioparaschiv/unbound/commit/9cb311c1583a4314da8e02ef586e338c447fed9b))
+
+
+### Bug Fixes
+
+* **unbound-dev:** drop the catalog stub's database on SIGHUP, fully ([b1393cc](https://github.com/marioparaschiv/unbound/commit/b1393cc661040690097d3d2d45a2a074f2f1c900))
+* **web:** break every ordering tie on the primary key ([6062129](https://github.com/marioparaschiv/unbound/commit/6062129442d9e29a3d96e5ac4c20484d4e8589cd))
+* **web:** bring back the hero phones' slide-up entrance ([#338](https://github.com/marioparaschiv/unbound/issues/338)) ([35f7b83](https://github.com/marioparaschiv/unbound/commit/35f7b8341b9d37abb4b065400192c23f8310b3d2))
+* **web:** cap cursor times at the end of year 9999 ([b5096e0](https://github.com/marioparaschiv/unbound/commit/b5096e04b32babe264bc1ff2d0ec8e514a61f803))
+* **web:** copy double precision columns from SQLite ([d8515a4](https://github.com/marioparaschiv/unbound/commit/d8515a46c9495a49072c8ae1e3b7ec116cde06a9))
+* **web:** copy double precision columns from SQLite ([6dd2385](https://github.com/marioparaschiv/unbound/commit/6dd2385dec4876ada534dedd855d4a6830ec5113))
+* **web:** copy tables newer than the SQLite source as empty ([66bf94e](https://github.com/marioparaschiv/unbound/commit/66bf94e625a3b2db464e7b136fc75a91ee74362a))
+* **web:** cover the mobile hero with dots, phones edge to edge ([#393](https://github.com/marioparaschiv/unbound/issues/393)) ([85523b1](https://github.com/marioparaschiv/unbound/commit/85523b1171fcb58ffd77fc7d2a1cf62e14e6cc04))
+* **web:** decode cursor timestamps in the cursor schemas ([69b5816](https://github.com/marioparaschiv/unbound/commit/69b581637da9fbad3fcb3565b6eea86bd995271d))
+* **web:** drop the "by" from addon card bylines ([#313](https://github.com/marioparaschiv/unbound/issues/313)) ([f7d20a9](https://github.com/marioparaschiv/unbound/commit/f7d20a9aa47aaed40092fe0db515d1012a2812a5))
+* **web:** ellipsize author names that overflow the byline ([#301](https://github.com/marioparaschiv/unbound/issues/301)) ([154e348](https://github.com/marioparaschiv/unbound/commit/154e34814537eaa76a52d48752e078e31eda77ee))
+* **web:** generate the crash report log migration with drizzle-kit ([3b76757](https://github.com/marioparaschiv/unbound/commit/3b76757a87b4f2bba228e67048aee7a40d8dbd13))
+* **web:** keep byline commas next to author names ([da1d3dd](https://github.com/marioparaschiv/unbound/commit/da1d3ddfd87afdef778241b103300989c345ba77))
+* **web:** locate Postgres refusals and stop --replace cascading ([b42f27a](https://github.com/marioparaschiv/unbound/commit/b42f27ac6ab9fb7772294792fdeceb2a8f710f5e))
+* **web:** lock account before a sponsorship snapshot ([3fd87a7](https://github.com/marioparaschiv/unbound/commit/3fd87a7917160803edd27ecbaec62f47355f3fbd))
+* **web:** lock account before a user delete draws an ordered id ([ef57b67](https://github.com/marioparaschiv/unbound/commit/ef57b67ba162dd413f83c169256a261beba8dd05))
+* **web:** mark the developer search navigations as fire-and-forget ([ce4e499](https://github.com/marioparaschiv/unbound/commit/ce4e499c6d5710d2ba40f691f7508e70ef0d4fe7))
+* **web:** order the copy's read-back by the table's key, not its text ([c569d31](https://github.com/marioparaschiv/unbound/commit/c569d31cf2ebababef33d89e84a61c2bc5c543f0))
+* **web:** pad the mobile hero phones and preload the image ([#394](https://github.com/marioparaschiv/unbound/issues/394)) ([2c386a9](https://github.com/marioparaschiv/unbound/commit/2c386a9773d599b9d1a04e8149b682f6f2cc6e59))
+* **web:** refuse a foreign SQLite source and unreadable text ([28f320b](https://github.com/marioparaschiv/unbound/commit/28f320bd0b20e8feb970ce1aaad7a126e31da7b9))
+* **web:** refuse NUL in copied text and json, naming the row by its key ([4f1c6f5](https://github.com/marioparaschiv/unbound/commit/4f1c6f52f846a08674099a79c30ce7589ce062b4))
+* **web:** refuse NUL in text bound for Postgres ([d2156fa](https://github.com/marioparaschiv/unbound/commit/d2156fa0adf71a58f12d40327981deb3945f4844))
+* **web:** refuse text Postgres cannot store in Better Auth requests ([e13033a](https://github.com/marioparaschiv/unbound/commit/e13033a98d9e49c9ba860a6338ff3990207acbf8))
+* **web:** search transfer targets case-insensitively ([16fd17f](https://github.com/marioparaschiv/unbound/commit/16fd17f2efb600c4db0e3dc1cbf040b1421c24bf))
+* **web:** set a badge in one statement so a revoke wins ([72b2ef6](https://github.com/marioparaschiv/unbound/commit/72b2ef6e1b4ed690142e5efd30b2245fe3e3026f))
+* **web:** skip empty relational filters for drizzle-orm rc.5 ([c7657ce](https://github.com/marioparaschiv/unbound/commit/c7657ce30454beeba43c76ca05b15356cf488301))
+* **web:** skip malformed author ids and cache Discord 400s as misses ([89b6149](https://github.com/marioparaschiv/unbound/commit/89b6149db5080e61736172899a30e27a3e1d68a6))
+* **web:** skip the retired bot feed table when copying SQLite ([e254626](https://github.com/marioparaschiv/unbound/commit/e25462656c5996d0d40e052429c3db4b364dc72a))
+* **web:** stamp a bot feed change after the ordering lock ([7184022](https://github.com/marioparaschiv/unbound/commit/718402224a8751c84335a36354f113eb1e6e4369))
+* **web:** stop an in-flight profile sweep when the refresher stops ([c7ce006](https://github.com/marioparaschiv/unbound/commit/c7ce0066041394691439f8f825c572e475e9d04a))
+* **web:** upgrade migration snapshots so drizzle-kit generates again ([efd9426](https://github.com/marioparaschiv/unbound/commit/efd9426ec306e40a7108853a1d55fb1346d53a5c))
+* **web:** upgrade migration snapshots so drizzle-kit generates again ([a6b4bb5](https://github.com/marioparaschiv/unbound/commit/a6b4bb5de625fa042925a45a5f1ae9d88a0452cb))
+
+
+### Code Refactoring
+
+* **web:** await every query and run transactions async ([e6d19e8](https://github.com/marioparaschiv/unbound/commit/e6d19e8e2b6241e1cc0822689266c3b7d12be422))
+* **web:** default the bot reads' grace and read one addon by key ([a50f1d3](https://github.com/marioparaschiv/unbound/commit/a50f1d390731f457e455c0fd4d6b0975a811481c))
+* **web:** match admin search on the listed table itself ([7e49ac1](https://github.com/marioparaschiv/unbound/commit/7e49ac1caf116e0b94e16124185e0a1a3e647800))
+* **web:** move hand-written SQL into custom migrations ([4d7f592](https://github.com/marioparaschiv/unbound/commit/4d7f592c52ce466d87389d6d9950761e67a05d84))
+* **web:** move LIVE_VERSIONS and the grace default to leaf modules ([32deb0f](https://github.com/marioparaschiv/unbound/commit/32deb0f597729b874320a2f421a027099fbde8cb))
+* **web:** move the SQLite copy out of src into scripts ([ded3674](https://github.com/marioparaschiv/unbound/commit/ded3674f0c4b0a7ce0958b987a14059a2a1ad5e4))
+* **web:** name the bot token host and the byline link prop ([e97bec8](https://github.com/marioparaschiv/unbound/commit/e97bec813fb328ccfce19ef104f4f72b633be6d4))
+* **web:** refuse text Postgres cannot store once per boundary ([5915ffa](https://github.com/marioparaschiv/unbound/commit/5915ffae5be5b7d499c50c6baef72e8d71906dab))
+* **web:** take only a sponsorship transaction in the upsert ([c834514](https://github.com/marioparaschiv/unbound/commit/c834514fcd46297c8d66d03642953d5f5211178d))
+* **web:** tidy isRetryable, a test title and one source insert ([3a1c94c](https://github.com/marioparaschiv/unbound/commit/3a1c94c89605a5ea2817869382377cac93968521))
+
+
+### Build System
+
+* **deps:** bump drizzle-kit from 1.0.0-rc.4 to 1.0.0-rc.5 ([56aed55](https://github.com/marioparaschiv/unbound/commit/56aed556f95b84cb3fc3de4ce4f6311d0fc2f004))
+* **deps:** bump drizzle-orm from 1.0.0-rc.4 to 1.0.0-rc.5 ([dbbc5d1](https://github.com/marioparaschiv/unbound/commit/dbbc5d166fe58fe7d106188769b484a2c503856d))
+* **deps:** eslint-plugin-jsdoc 65 with the JSDoc it requires ([e4b303a](https://github.com/marioparaschiv/unbound/commit/e4b303a9d547a703e992955e1447c821922efb24))
+* **deps:** merge the open Dependabot updates ([cab317a](https://github.com/marioparaschiv/unbound/commit/cab317a1c8e962de4a197f298c42296b6a2afb8d))
+
+
+### Documentation
+
+* add the JSDoc eslint-plugin-jsdoc 65 requires ([d5632e8](https://github.com/marioparaschiv/unbound/commit/d5632e824e43cad5a88d15a5083b7cfc0097346c))
+* **web:** describe bytewise text without SQLite ([7151f30](https://github.com/marioparaschiv/unbound/commit/7151f302ce2735e182e75143a9e720b2858a7426))
+* **web:** trim author attribution comments ([a12f948](https://github.com/marioparaschiv/unbound/commit/a12f948be5d05d1ad8b8ff832a46c6dd07993be2))
+
+
+### Styles
+
+* shorten two comments under the length limit ([38c86b6](https://github.com/marioparaschiv/unbound/commit/38c86b69a164a664b66a5cc9f5f888ff5c4d14de))
+* sort imports and fix the lint findings from the bot switch ([95d4dd1](https://github.com/marioparaschiv/unbound/commit/95d4dd1afde5aac343b7b04d3b0110b5f2a7b096))
+* sort imports from the audit floor round ([07867f9](https://github.com/marioparaschiv/unbound/commit/07867f9a484f440fc299b32794d6b8fac5992a6f))
+* sort imports from the fix round ([9c2c4ca](https://github.com/marioparaschiv/unbound/commit/9c2c4ca53c84bdbeef899cd66e312bb85c384110))
+* **web:** keep readAddonSource's doc above it ([e281bf2](https://github.com/marioparaschiv/unbound/commit/e281bf2064df70fbd13eb38ab5008084573ad1e6))
+* **web:** let more avatar colour through the team card backdrop ([#323](https://github.com/marioparaschiv/unbound/issues/323)) ([ff3a968](https://github.com/marioparaschiv/unbound/commit/ff3a968302468833f4ba148e52950812dd49ce63))
+* **web:** satisfy oxlint in the Postgres tests ([a802c4e](https://github.com/marioparaschiv/unbound/commit/a802c4e746a93b17e3e939b491be73be02e0c159))
+* **web:** satisfy oxlint in the SQLite copy ([37e29a1](https://github.com/marioparaschiv/unbound/commit/37e29a13907bb15a8bea2826d1b8ee29fb7876a5))
+* **web:** sort imports and satisfy oxlint in the fix round ([b3b7a6d](https://github.com/marioparaschiv/unbound/commit/b3b7a6d21ddaea6fde0dfb46e8450fc201908a88))
+* **web:** sort imports and shorten a comment from the fix round ([a45c158](https://github.com/marioparaschiv/unbound/commit/a45c15866016414c1b4c4594f4ff50fe86d149f7))
+* **web:** sort the admin-lists test imports ([592bb91](https://github.com/marioparaschiv/unbound/commit/592bb91fca9b0ad40175d5641066c779592f8d9a))
+* **web:** sort the SQLite copy imports ([426fd60](https://github.com/marioparaschiv/unbound/commit/426fd60adb7f24b1dea88684afcfae44be2ae168))
+* **web:** sort the SQLite copy test imports ([cfb6ccf](https://github.com/marioparaschiv/unbound/commit/cfb6ccf7950bdf4a7e91f360e87ecbac5c216e04))
+
+
+### Tests
+
+* **web:** add the final SQLite schema as a fixture ([1095455](https://github.com/marioparaschiv/unbound/commit/109545504bffe17b46fffa358729ef49ca531085))
+* **web:** assert the seek predicate of each planned index scan ([67947f1](https://github.com/marioparaschiv/unbound/commit/67947f1e1d8060add1802a32d33225e175634236))
+* **web:** check only the failed context's own database is dropped ([0ed9b36](https://github.com/marioparaschiv/unbound/commit/0ed9b365270d789adf228c51cad83dcea5cce61b))
+* **web:** count only this database's ordering-lock waiters ([7645884](https://github.com/marioparaschiv/unbound/commit/76458843955617fa41405a303cee4212e492ae29))
+* **web:** cover the SQLite copy end to end ([f67a019](https://github.com/marioparaschiv/unbound/commit/f67a019231fbf85cc6dfbf3b4a297bfe7294a18c))
+* **web:** drop needless id assertions ([480c416](https://github.com/marioparaschiv/unbound/commit/480c416e6b791ca2a8e6f568d71c2399db4aad3c))
+* **web:** drop the test database when a context fails to start ([ffe41a7](https://github.com/marioparaschiv/unbound/commit/ffe41a7ad107202baf29fcfc1055afb4bfeb1a13))
+* **web:** expect no source rows for tables newer than SQLite ([150392b](https://github.com/marioparaschiv/unbound/commit/150392b9b878f22a434368af217f9669b3f3f3b1))
+* **web:** expect the live digest in the first-party list ([3fa1c6e](https://github.com/marioparaschiv/unbound/commit/3fa1c6e61489a673b2ef3ff871ac778e141b639b))
+* **web:** keep the SQLite fixture frozen at the pre-Postgres schema ([c9c1563](https://github.com/marioparaschiv/unbound/commit/c9c1563de5ea31b30045b50b8fe2201ea939a897))
+* **web:** keep the SQLite fixture frozen at the pre-Postgres schema ([46c663a](https://github.com/marioparaschiv/unbound/commit/46c663a57b1546cbe335aefe55153f223b6b8950))
+* **web:** plan index filters with only bitmap scans left ([3efd92b](https://github.com/marioparaschiv/unbound/commit/3efd92b005ea75510a9befeafee5074b5bd94dc1))
+* **web:** plan the addon search seek without a cursor only ([294bb11](https://github.com/marioparaschiv/unbound/commit/294bb11bd468753c37e925b9a44ddcc2fe8a7abe))
+* **web:** restore the time zone by name instead of deleting it ([6b49a8a](https://github.com/marioparaschiv/unbound/commit/6b49a8a5ea1612bd60374fdec200f71d4b38641b))
+* **web:** run the suite on throwaway Postgres databases ([a91bbfc](https://github.com/marioparaschiv/unbound/commit/a91bbfc7a3bb85914d75fb3b6329fb1196e2787d))
+* **web:** seed crash reports and team members in the SQLite fixture ([1e00df7](https://github.com/marioparaschiv/unbound/commit/1e00df70fcd59785ea05b73582809603050f3681))
+* **web:** wait out a slow drop of a failed test context ([2fd98e4](https://github.com/marioparaschiv/unbound/commit/2fd98e43d079a8f47cddd867d1e801f11d10841c))
+
+
+### Continuous Integration
+
+* **loader:** reuse IPAs, typecheck PRs and fix the Forms fallback ([ffc6658](https://github.com/marioparaschiv/unbound/commit/ffc6658c13366c3abebff9b4ff1aac5bbeb672de))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @unbound-app/contracts bumped to 0.11.0
+    * @unbound-app/logger bumped to 0.7.1
+    * @unbound-app/utils bumped to 0.9.1
+
 ## [0.10.0](https://github.com/marioparaschiv/unbound/compare/web-v0.9.0...web-v0.10.0) (2026-10-25)
 
 
