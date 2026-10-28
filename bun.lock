@@ -55,7 +55,7 @@
     },
     "apps/sdk-generator": {
       "name": "@unbound-app/sdk-generator",
-      "version": "0.8.4",
+      "version": "0.9.0",
       "dependencies": {
         "@unbound-app/logger": "workspace:*",
       },
@@ -68,7 +68,7 @@
     },
     "apps/web": {
       "name": "@unbound-app/web",
-      "version": "0.10.0",
+      "version": "0.11.0",
       "dependencies": {
         "@base-ui/react": "^1.9.0",
         "@better-auth/api-key": "1.7.12",
@@ -126,7 +126,7 @@
     },
     "packages/api": {
       "name": "@unbound-app/api",
-      "version": "0.10.0-a2d2f18c6e332e846f3d343eb39b0183506381df9cd2268669fc93000e9bea30",
+      "version": "0.11.0",
       "devDependencies": {
         "@unbound-app/client": "workspace:*",
         "@unbound-app/sdk-generator": "workspace:*",
@@ -140,7 +140,7 @@
     },
     "packages/cli": {
       "name": "@unbound-app/cli",
-      "version": "0.10.0",
+      "version": "0.11.0",
       "bin": {
         "ubd": "src/index.ts",
       },
@@ -168,7 +168,7 @@
     },
     "packages/client": {
       "name": "@unbound-app/client",
-      "version": "0.10.0",
+      "version": "0.11.0",
       "dependencies": {
         "@unbound-app/contracts": "workspace:*",
         "@unbound-app/debugger-protocol": "workspace:*",
@@ -242,7 +242,7 @@
     },
     "packages/contracts": {
       "name": "@unbound-app/contracts",
-      "version": "0.10.0",
+      "version": "0.11.0",
       "dependencies": {
         "@unbound-app/types": "workspace:*",
         "picomatch": "^4.0.7",
@@ -258,7 +258,7 @@
     },
     "packages/debugger": {
       "name": "@unbound-app/debugger",
-      "version": "0.8.1",
+      "version": "0.9.0",
       "bin": {
         "ub-debugger": "src/index.ts",
       },
@@ -278,7 +278,7 @@
     },
     "packages/debugger-protocol": {
       "name": "@unbound-app/debugger-protocol",
-      "version": "0.8.1",
+      "version": "0.9.0",
       "dependencies": {
         "zod": "^4.0.0",
       },
@@ -293,7 +293,7 @@
     },
     "packages/logger": {
       "name": "@unbound-app/logger",
-      "version": "0.7.0",
+      "version": "0.7.1",
       "devDependencies": {
         "@types/bun": "catalog:",
       },
@@ -832,7 +832,7 @@
     },
     "packages/types": {
       "name": "@unbound-app/types",
-      "version": "0.9.0",
+      "version": "0.10.0",
       "dependencies": {
         "possess": "catalog:",
       },
@@ -845,7 +845,7 @@
     },
     "packages/utils": {
       "name": "@unbound-app/utils",
-      "version": "0.9.0",
+      "version": "0.9.1",
       "dependencies": {
         "@unbound-app/types": "workspace:*",
       },
